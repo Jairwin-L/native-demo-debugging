@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+    <meta name="renderer" content="webkit" />
+    <meta name="Author" content="Jairwin" />
+    <meta name="Keywords" content="Jairwin" />
+    <meta name="Description" content="Jairwin" />
+    <title>event-loop</title>
+  </head>
+  <body>
+    <noscript>
+      <strong>event-loop</strong>
+    </noscript>
+    <h1>event loop</h1>
+    <button>change</button>
+    <script type="text/javascript">
+      const h1 = document.querySelector("h1");
+      const btn = document.querySelector("button");
+      // 死循环指定的时间
+      function delay(duration) {
+        var start = Date.now();
+        while (Date.now() - start < duration) {}
+      }
+      btn.onclick = function () {
+        h1.textContent = "message loop";
+        delay(3000);
+      };
+    </script>
+  </body>
+</html>
